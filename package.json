@@ -1,0 +1,7 @@
+{
+  "name": "FB",
+  "packageManager": "yarn@4.6.0",
+  "devDependencies": {
+    "cypress": "^15.0.0"
+  }
+}
