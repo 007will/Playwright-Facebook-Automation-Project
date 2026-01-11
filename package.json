@@ -2,9 +2,9 @@
   "name": "FB",
   "packageManager": "yarn@4.6.0",
   "devDependencies": {
-    "@playwright/test": "^1.56.1",
+    "@playwright/test": "^1.57.0",
     "@types/node": "^24.8.1",
-    "cypress": "^15.0.0"
+    "cypress": "^15.8.2"
   },
   "scripts": {}
 }
