@@ -1,0 +1,25 @@
+name: Deploy to Amazon ECS
+ 
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-region: ${{ secrets.AWS_REGION }}
+          role-to-assume: arn:aws:iam::123456789012:role/MyRole
+
+      - name: Deploy to ECS
+        run: |
+          aws ecs update-service --cluster my-cluster \
+              --service my-service \
+              --force-new-deployment
